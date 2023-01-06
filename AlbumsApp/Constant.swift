@@ -8,19 +8,39 @@
 import Foundation
 
 enum albumsAPICall: String{
-    typealias RawValue = <#type#>
     
     
+    private var baseURL: String {
+        "https://jsonplaceholder.typicode.com"
+    }
     private var albumURL: String {
-        "https://jsonplaceholder.typicode.com/albums"
+        "/albums"
     }
     
     private var photosURL: String {
-        "https://jsonplaceholder.typicode.com/photos"
+        "/photos"
     }
     
-    private var commentsAPI: String {
-        "https://jsonplaceholder.typicode.com/comments"
+    private var commentsURL: String {
+        "/comments"
     }
     
+    case getAlbum
+    case getPhotos
+    case getComments
+    
+    var urlString: String {
+        switch self {
+        case .getAlbum:
+            return "\(baseURL)\(albumURL)"
+        case .getPhotos:
+            return "\(baseURL)\(photosURL)"
+        case .getComments:
+            return "\(baseURL)\(commentsURL)"
+        }
+    }
+    
+    var url: URL {
+        return URL(string: urlString)!
+    }
 }
