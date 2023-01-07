@@ -8,57 +8,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Q2e-hU-hpw">
             <objects>
-                <viewController id="Yku-Hd-YQT" customClass="ViewController" customModule="AlbumsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yku-Hd-YQT" customClass="MainViewController" customModule="AlbumsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8I-jO-z0n">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NFe-sk-AWT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NFe-sk-AWT">
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCellIdentifier" rowHeight="355" id="v6U-Lp-Ja6" userLabel="AlbumCell" customClass="MainTableViewCell" customModule="AlbumsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="355"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCellIdentifier" rowHeight="92" id="v6U-Lp-Ja6" userLabel="AlbumCell" customClass="MainTableViewCell" customModule="AlbumsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v6U-Lp-Ja6" id="Jsb-vS-3er">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="355"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9zy-1V-1Rs">
-                                                    <rect key="frame" x="20" y="69" width="350" height="206"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="206" id="7Zj-Qo-4FY"/>
-                                                        <constraint firstAttribute="width" constant="350" id="Ywf-El-NGn"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-Wk-ybW">
-                                                    <rect key="frame" x="20" y="11" width="350" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="350" id="EpU-np-nSk"/>
-                                                        <constraint firstAttribute="height" constant="21" id="ys0-YO-mpQ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-rO-GUj">
-                                                    <rect key="frame" x="20" y="40" width="350" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="350" height="70"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="350" id="MsA-tr-CUk"/>
-                                                        <constraint firstAttribute="height" constant="21" id="Uje-3W-K8j"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoW-oR-u2a">
-                                                    <rect key="frame" x="20" y="283" width="350" height="72"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="350" id="Wdh-hB-swc"/>
-                                                        <constraint firstAttribute="height" constant="72" id="vow-nJ-jZ2"/>
+                                                        <constraint firstAttribute="height" constant="70" id="CHp-WQ-RXp"/>
+                                                        <constraint firstAttribute="width" constant="350" id="U7e-00-u8B"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -66,26 +40,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ibm-Wk-ybW" firstAttribute="trailing" secondItem="Jsb-vS-3er" secondAttribute="trailingMargin" id="4cw-uQ-zQ9"/>
-                                                <constraint firstItem="IoW-oR-u2a" firstAttribute="trailing" secondItem="Jsb-vS-3er" secondAttribute="trailingMargin" id="Bs4-sS-SyU"/>
-                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="leading" secondItem="Jsb-vS-3er" secondAttribute="leadingMargin" id="FXo-38-Ayd"/>
-                                                <constraint firstItem="9zy-1V-1Rs" firstAttribute="top" secondItem="RA3-rO-GUj" secondAttribute="bottom" constant="8" symbolic="YES" id="G1Z-SN-Rwr"/>
-                                                <constraint firstItem="ibm-Wk-ybW" firstAttribute="leading" secondItem="Jsb-vS-3er" secondAttribute="leadingMargin" id="U1a-zG-m1K"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="IoW-oR-u2a" secondAttribute="bottom" constant="-11" id="UzW-9L-iye"/>
-                                                <constraint firstItem="IoW-oR-u2a" firstAttribute="top" secondItem="9zy-1V-1Rs" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFU-R6-xtd"/>
-                                                <constraint firstItem="ibm-Wk-ybW" firstAttribute="top" secondItem="Jsb-vS-3er" secondAttribute="topMargin" id="cRw-ii-lGW"/>
-                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="trailing" secondItem="Jsb-vS-3er" secondAttribute="trailingMargin" id="eHb-f6-y6I"/>
-                                                <constraint firstItem="9zy-1V-1Rs" firstAttribute="leading" secondItem="Jsb-vS-3er" secondAttribute="leadingMargin" id="emM-eZ-6Ys"/>
-                                                <constraint firstItem="IoW-oR-u2a" firstAttribute="leading" secondItem="Jsb-vS-3er" secondAttribute="leadingMargin" id="lrp-cI-9Fa"/>
-                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="top" secondItem="ibm-Wk-ybW" secondAttribute="bottom" constant="8" symbolic="YES" id="mn9-xG-aa8"/>
-                                                <constraint firstItem="9zy-1V-1Rs" firstAttribute="trailing" secondItem="Jsb-vS-3er" secondAttribute="trailingMargin" id="smD-mR-ijR"/>
+                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="bottom" secondItem="Jsb-vS-3er" secondAttribute="bottomMargin" id="4HJ-JM-GZp"/>
+                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="leading" secondItem="Jsb-vS-3er" secondAttribute="leadingMargin" id="SVR-ce-hOq"/>
+                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="top" secondItem="Jsb-vS-3er" secondAttribute="topMargin" id="quK-Bh-HLh"/>
+                                                <constraint firstItem="RA3-rO-GUj" firstAttribute="trailing" secondItem="Jsb-vS-3er" secondAttribute="trailingMargin" id="vD5-oX-Qcc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="albumCommentsLabel" destination="IoW-oR-u2a" id="Lqo-at-Kxh"/>
-                                            <outlet property="albumImageView" destination="9zy-1V-1Rs" id="QaX-0X-H4C"/>
-                                            <outlet property="albumTitleLabel" destination="RA3-rO-GUj" id="ZGf-In-Guf"/>
-                                            <outlet property="userIDLabel" destination="ibm-Wk-ybW" id="xeF-tj-KJn"/>
+                                            <outlet property="albumTitleLabel" destination="RA3-rO-GUj" id="Jbn-wl-XHv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -93,12 +55,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iGK-Y6-v2T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="NFe-sk-AWT" firstAttribute="leading" secondItem="iGK-Y6-v2T" secondAttribute="leading" id="RQ5-GB-7jx"/>
-                            <constraint firstItem="iGK-Y6-v2T" firstAttribute="bottom" secondItem="NFe-sk-AWT" secondAttribute="bottom" id="u4M-Ra-Yi4"/>
-                            <constraint firstItem="iGK-Y6-v2T" firstAttribute="trailing" secondItem="NFe-sk-AWT" secondAttribute="trailing" id="wR0-Ri-kHX"/>
-                            <constraint firstItem="NFe-sk-AWT" firstAttribute="top" secondItem="iGK-Y6-v2T" secondAttribute="top" id="wfZ-kO-d23"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mainTableView" destination="NFe-sk-AWT" id="kxE-LK-fk4"/>
