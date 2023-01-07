@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum albumsAPICall: String{
+enum AlbumsAPICall: String{
     
     
     private var baseURL: String {

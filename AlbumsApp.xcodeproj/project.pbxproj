@@ -15,6 +15,8 @@
 		5C2C69AC2968935B0074B7F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C69AA2968935B0074B7F1 /* LaunchScreen.storyboard */; };
 		5C2C69B42968A3470074B7F1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C69B32968A3470074B7F1 /* MainTableViewCell.swift */; };
 		5C2C69B62968A4580074B7F1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C69B52968A4580074B7F1 /* Constant.swift */; };
+		5C2C69B82968B1E90074B7F1 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C69B72968B1E90074B7F1 /* Webservice.swift */; };
+		5C2C69BA2968BEA90074B7F1 /* MainAlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5C2C69AD2968935B0074B7F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C2C69B32968A3470074B7F1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		5C2C69B52968A4580074B7F1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		5C2C69B72968B1E90074B7F1 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				5C2C69AA2968935B0074B7F1 /* LaunchScreen.storyboard */,
 				5C2C69AD2968935B0074B7F1 /* Info.plist */,
 				5C2C69B52968A4580074B7F1 /* Constant.swift */,
+				5C2C69B72968B1E90074B7F1 /* Webservice.swift */,
+				5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */,
 			);
 			path = AlbumsApp;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			files = (
 				5C2C69A42968935A0074B7F1 /* ViewController.swift in Sources */,
 				5C2C69A02968935A0074B7F1 /* AppDelegate.swift in Sources */,
+				5C2C69B82968B1E90074B7F1 /* Webservice.swift in Sources */,
+				5C2C69BA2968BEA90074B7F1 /* MainAlbumsModel.swift in Sources */,
 				5C2C69B62968A4580074B7F1 /* Constant.swift in Sources */,
 				5C2C69B42968A3470074B7F1 /* MainTableViewCell.swift in Sources */,
 				5C2C69A22968935A0074B7F1 /* SceneDelegate.swift in Sources */,
