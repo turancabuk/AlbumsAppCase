@@ -8,8 +8,14 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var albumTitleLabel: UILabel!
+    
+    
+    @IBOutlet weak var userIDLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var commentNameLabel: UILabel!
+    @IBOutlet weak var commentMailLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var albumImage: UIImageView!
     
     
     

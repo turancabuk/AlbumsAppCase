@@ -42,4 +42,9 @@ struct CommentElement: Codable {
         case id, name, email, body
     }
 }
+struct UniqueElement {
+    let album: AlbumElement
+    let comment: CommentElement
+    let photo: PhotoElement
+}
 
