@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yku-Hd-YQT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C0x-7C-dqA">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -8,6 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash Controller-->
+        <scene sceneID="1ue-4B-qFj">
+            <objects>
+                <viewController id="C0x-7C-dqA" customClass="SplashController" customModule="AlbumsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5k4-Ui-7h2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="albums" translatesAutoresizingMaskIntoConstraints="NO" id="HJ2-ux-Zce">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Szs-my-94o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HJ2-ux-Zce" firstAttribute="top" secondItem="Szs-my-94o" secondAttribute="top" id="QNG-lp-TbT"/>
+                            <constraint firstItem="HJ2-ux-Zce" firstAttribute="leading" secondItem="Szs-my-94o" secondAttribute="leading" id="QpK-4F-vWy"/>
+                            <constraint firstItem="Szs-my-94o" firstAttribute="bottom" secondItem="HJ2-ux-Zce" secondAttribute="bottom" id="kMN-c2-SRW"/>
+                            <constraint firstItem="Szs-my-94o" firstAttribute="trailing" secondItem="HJ2-ux-Zce" secondAttribute="trailing" id="oeS-y9-3W2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Yku-Hd-YQT" kind="presentation" identifier="SplashScreenIdentifier" modalPresentationStyle="fullScreen" id="6hL-wm-CyG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCG-IH-RI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557" y="106"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="Q2e-hU-hpw">
             <objects>
@@ -135,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="albums" width="650" height="520"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

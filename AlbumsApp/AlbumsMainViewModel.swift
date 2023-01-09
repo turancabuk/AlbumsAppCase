@@ -15,6 +15,8 @@ final class AlbumsMainViewModel {
     init(webservice: AlbumsWebserviceProtocol) {
         self.webservice = webservice
     }
+
+    
     
     func fetchData(completion: @escaping (Result<[UniqueElement], Error>) -> Void) {
         let dispatchGroup = DispatchGroup()

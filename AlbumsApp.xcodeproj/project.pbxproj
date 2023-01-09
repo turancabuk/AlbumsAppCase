@@ -19,6 +19,7 @@
 		5C2C69BA2968BEA90074B7F1 /* MainAlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */; };
 		5CB3DFA62969D96E0060C01D /* AlbumsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */; };
 		5CB3DFA9296A2FDF0060C01D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB3DFA8296A2FDF0060C01D /* Kingfisher */; };
+		5CF7E53E296C8EA9009CC60F /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7E53D296C8EA9009CC60F /* SplashController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5C2C69B72968B1E90074B7F1 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumsModel.swift; sourceTree = "<group>"; };
 		5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsMainViewModel.swift; sourceTree = "<group>"; };
+		5CF7E53D296C8EA9009CC60F /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				5C2C69B72968B1E90074B7F1 /* Webservice.swift */,
 				5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */,
 				5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */,
+				5CF7E53D296C8EA9009CC60F /* SplashController.swift */,
 			);
 			path = AlbumsApp;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				5C2C69B62968A4580074B7F1 /* Constant.swift in Sources */,
 				5C2C69B42968A3470074B7F1 /* MainTableViewCell.swift in Sources */,
 				5C2C69A22968935A0074B7F1 /* SceneDelegate.swift in Sources */,
+				5CF7E53E296C8EA9009CC60F /* SplashController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
