@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 
+
 class MainViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
@@ -28,8 +29,10 @@ class MainViewController: UIViewController {
         
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        fetchData()
         
-        
+    }
+    func fetchData() {
         viewModel.fetchData { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -50,22 +53,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         return viewModel.uniqueElement.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCellIdentifier") as! MainTableViewCell
-        
-        let currentAlbum = viewModel.uniqueElement[indexPath.row]
-        cell.userIDLabel.text = "user: \(currentAlbum.album.userID!)"
-        cell.titleLabel.text = currentAlbum.album.title
-        cell.commentNameLabel.text = currentAlbum.comment.name
-        cell.commentMailLabel.text = currentAlbum.comment.email
-        cell.commentLabel.text = currentAlbum.comment.body
-        
-        let url = URL(string: currentAlbum.photo.url ?? "")
-        cell.albumImage.kf.setImage(with: url)
-        
+        let currentAlbum = self.viewModel.uniqueElement[indexPath.row]
+        cell.configCell(model: currentAlbum)
         return cell
+
     }
 }
+
+
 

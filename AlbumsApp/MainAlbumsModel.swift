@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 // MARK: - AlbumElement
 struct AlbumElement: Codable {
     let userID, id: Int?
@@ -17,7 +16,6 @@ struct AlbumElement: Codable {
         case id, title
     }
 }
-
 // MARK: - PhotoElement
 struct PhotoElement: Codable {
     let albumID, id: Int?
@@ -30,8 +28,6 @@ struct PhotoElement: Codable {
         case thumbnailURL = "thumbnailUrl"
     }
 }
-
-
 // MARK: - CommentElement
 struct CommentElement: Codable {
     let postID, id: Int?
@@ -42,6 +38,7 @@ struct CommentElement: Codable {
         case id, name, email, body
     }
 }
+// MARK: - UniqueElement
 struct UniqueElement {
     let album: AlbumElement
     let comment: CommentElement
