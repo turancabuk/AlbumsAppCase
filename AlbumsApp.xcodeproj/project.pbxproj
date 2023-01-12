@@ -20,7 +20,6 @@
 		5CB3DFA62969D96E0060C01D /* AlbumsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */; };
 		5CD08BE9296DE161002CCF01 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5CD08BE8296DE161002CCF01 /* Kingfisher */; };
 		5CF7E53E296C8EA9009CC60F /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7E53D296C8EA9009CC60F /* SplashController.swift */; };
-		5CF7E540296CA4CB009CC60F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7E53F296CA4CB009CC60F /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumsModel.swift; sourceTree = "<group>"; };
 		5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsMainViewModel.swift; sourceTree = "<group>"; };
 		5CF7E53D296C8EA9009CC60F /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
-		5CF7E53F296CA4CB009CC60F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,22 +70,85 @@
 		5C2C699E2968935A0074B7F1 /* AlbumsApp */ = {
 			isa = PBXGroup;
 			children = (
-				5C2C699F2968935A0074B7F1 /* AppDelegate.swift */,
-				5C2C69A12968935A0074B7F1 /* SceneDelegate.swift */,
-				5C2C69A32968935A0074B7F1 /* MainViewController.swift */,
-				5C2C69B32968A3470074B7F1 /* MainTableViewCell.swift */,
+				5CD08BF1297094AF002CCF01 /* Utilities */,
+				5CD08BF0297094A4002CCF01 /* Constant */,
+				5CD08BEF2970948D002CCF01 /* Cell */,
+				5CD08BED29709448002CCF01 /* App */,
+				5CD08BEB2970940C002CCF01 /* ViewModel */,
+				5CD08BEA297093F2002CCF01 /* Model */,
+				5CD08BEC29709424002CCF01 /* Controller */,
+				5CD08BEE29709471002CCF01 /* Webservice */,
 				5C2C69A52968935A0074B7F1 /* Main.storyboard */,
+			);
+			path = AlbumsApp;
+			sourceTree = "<group>";
+		};
+		5CD08BEA297093F2002CCF01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CD08BEB2970940C002CCF01 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5CD08BEC29709424002CCF01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C69A32968935A0074B7F1 /* MainViewController.swift */,
+				5CF7E53D296C8EA9009CC60F /* SplashController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5CD08BED29709448002CCF01 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C69A12968935A0074B7F1 /* SceneDelegate.swift */,
+				5C2C699F2968935A0074B7F1 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5CD08BEE29709471002CCF01 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C69B72968B1E90074B7F1 /* Webservice.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
+		5CD08BEF2970948D002CCF01 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C69B32968A3470074B7F1 /* MainTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5CD08BF0297094A4002CCF01 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C69B52968A4580074B7F1 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		5CD08BF1297094AF002CCF01 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
 				5C2C69A82968935B0074B7F1 /* Assets.xcassets */,
 				5C2C69AA2968935B0074B7F1 /* LaunchScreen.storyboard */,
 				5C2C69AD2968935B0074B7F1 /* Info.plist */,
-				5C2C69B52968A4580074B7F1 /* Constant.swift */,
-				5C2C69B72968B1E90074B7F1 /* Webservice.swift */,
-				5C2C69B92968BEA90074B7F1 /* MainAlbumsModel.swift */,
-				5CB3DFA52969D96E0060C01D /* AlbumsMainViewModel.swift */,
-				5CF7E53D296C8EA9009CC60F /* SplashController.swift */,
-				5CF7E53F296CA4CB009CC60F /* Extension.swift */,
 			);
-			path = AlbumsApp;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +233,6 @@
 				5C2C69A02968935A0074B7F1 /* AppDelegate.swift in Sources */,
 				5C2C69B82968B1E90074B7F1 /* Webservice.swift in Sources */,
 				5C2C69BA2968BEA90074B7F1 /* MainAlbumsModel.swift in Sources */,
-				5CF7E540296CA4CB009CC60F /* Extension.swift in Sources */,
 				5C2C69B62968A4580074B7F1 /* Constant.swift in Sources */,
 				5C2C69B42968A3470074B7F1 /* MainTableViewCell.swift in Sources */,
 				5C2C69A22968935A0074B7F1 /* SceneDelegate.swift in Sources */,
@@ -325,7 +385,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6N4HMYH8YX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlbumsApp/Info.plist;
+				INFOPLIST_FILE = AlbumsApp/Utilities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,7 +413,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6N4HMYH8YX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlbumsApp/Info.plist;
+				INFOPLIST_FILE = AlbumsApp/Utilities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

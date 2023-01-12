@@ -51,15 +51,29 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel.uniqueElement.count
+        return groupedUniqueElements.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "albumCellIdentifier") as! MainTableViewCell
-        let currentAlbum = self.viewModel.uniqueElement[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "albumCellIdentifier", for: indexPath) as! MainTableViewCell
+        let elements = groupedUniqueElements[groupedUniqueElements.keys.sorted()[indexPath.row]]
+        let currentAlbum = (elements?.first)!
         cell.configCell(model: currentAlbum)
         return cell
-
+        
+    }
+}
+extension MainViewController {
+    var groupedUniqueElements: [Int: [UniqueElement]] {
+        var groupedElements: [Int: [UniqueElement]] = [:]
+        for element in viewModel.uniqueElement {
+            if groupedElements[element.album.id!] == nil {
+                groupedElements[element.album.id!] = [element]
+            } else {
+                groupedElements[element.album.id!]?.append(element)
+            }
+        }
+        return groupedElements
     }
 }
 

@@ -12,6 +12,10 @@ final class AlbumsMainViewModel {
     
     var uniqueElement: [UniqueElement] = []
     
+    var albums: [AlbumElement] = []
+    var comments: [CommentElement] = []
+    var photos: [PhotoElement] = []
+    
     init(webservice: AlbumsWebserviceProtocol) {
         self.webservice = webservice
     }
@@ -21,15 +25,11 @@ final class AlbumsMainViewModel {
     func fetchData(completion: @escaping (Result<[UniqueElement], Error>) -> Void) {
         let dispatchGroup = DispatchGroup()
         
-        var albums: [AlbumElement] = []
-        var comments: [CommentElement] = []
-        var photos: [PhotoElement] = []
-        
         dispatchGroup.enter()
         webservice.fetch(response: [AlbumElement].self, with: AlbumsAPICall.getAlbum) { result in
             switch result {
             case .success(let fetchedAlbums):
-                albums = fetchedAlbums
+                self.albums = fetchedAlbums
                 dispatchGroup.leave()
             case .failure(let error):
                 completion(.failure(error))
@@ -41,7 +41,7 @@ final class AlbumsMainViewModel {
         webservice.fetch(response: [CommentElement].self, with: AlbumsAPICall.getComments) { result in
             switch result {
             case .success(let fetchedComments):
-                comments = fetchedComments
+                self.comments = fetchedComments
                 dispatchGroup.leave()
             case .failure(let error):
                 completion(.failure(error))
@@ -53,7 +53,7 @@ final class AlbumsMainViewModel {
         webservice.fetch(response: [PhotoElement].self, with: AlbumsAPICall.getPhotos) { result in
             switch result {
             case .success(let fetchedPhotos):
-                photos = fetchedPhotos
+                self.photos = fetchedPhotos
                 dispatchGroup.leave()
             case .failure(let error):
                 completion(.failure(error))
@@ -62,10 +62,10 @@ final class AlbumsMainViewModel {
         }
         
         dispatchGroup.notify(queue: .main) {
-            for album in albums {
+            for album in self.albums {
                 let albumId = album.id
-                let relevantComments = comments.filter { $0.postID == albumId }
-                let relevantPhotos = photos.filter { $0.albumID == albumId }
+                let relevantComments = self.comments.filter { $0.postID == albumId }
+                let relevantPhotos = self.photos.filter { $0.albumID == albumId }
                 for comment in relevantComments {
                     for photo in relevantPhotos {
                         self.uniqueElement.append(UniqueElement(album: album, comment: comment, photo: photo))
