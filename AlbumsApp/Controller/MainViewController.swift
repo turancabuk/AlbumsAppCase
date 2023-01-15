@@ -67,15 +67,12 @@ extension MainViewController {
     var groupedUniqueElements: [Int: [UniqueElement]] {
         var groupedElements: [Int: [UniqueElement]] = [:]
         for element in viewModel.uniqueElement {
-            if groupedElements[element.album.id!] == nil {
-                groupedElements[element.album.id!] = [element]
+            if groupedElements[element.album.id] == nil {
+                groupedElements[element.album.id] = [element]
             } else {
-                groupedElements[element.album.id!]?.append(element)
+                groupedElements[element.album.id]?.append(element)
             }
         }
         return groupedElements
     }
 }
-
-
-

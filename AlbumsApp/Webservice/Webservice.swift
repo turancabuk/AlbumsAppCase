@@ -9,10 +9,10 @@ import Foundation
 
 
 protocol AlbumsWebserviceProtocol {
-    func fetch<T: Decodable>(response: T.Type, with path: AlbumsAPICall, completion: @escaping(Result<T, Error>) -> Void)
+    func fetch<T: Codable>(response: T.Type, with path: AlbumsAPICall, completion: @escaping(Result<T, Error>) -> Void)
 }
 final class AlbumsWebservice: AlbumsWebserviceProtocol {
-    func fetch<T>(response: T.Type, with path: AlbumsAPICall, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+    func fetch<T>(response: T.Type, with path: AlbumsAPICall, completion: @escaping (Result<T, Error>) -> Void) where T : Codable {
         let urlRequest = URLRequest(url: path.url)
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             if let error = error {

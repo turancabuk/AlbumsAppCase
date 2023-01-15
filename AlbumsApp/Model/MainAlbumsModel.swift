@@ -6,10 +6,19 @@
 //
 
 import Foundation
+
+// MARK: - UniqueElement
+struct UniqueElement: Codable {
+    let album: AlbumElement
+    let comment: CommentElement
+    let photo: PhotoElement
+    var photos: [PhotoElement]
+}
+
 // MARK: - AlbumElement
 struct AlbumElement: Codable {
-    let userID, id: Int?
-    let title: String?
+    let userID, id: Int
+    let title: String
 
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
@@ -19,7 +28,7 @@ struct AlbumElement: Codable {
 // MARK: - PhotoElement
 struct PhotoElement: Codable {
     let albumID, id: Int?
-    let title: String?
+    let title: String
     let url, thumbnailURL: String?
 
     enum CodingKeys: String, CodingKey {
@@ -30,18 +39,13 @@ struct PhotoElement: Codable {
 }
 // MARK: - CommentElement
 struct CommentElement: Codable {
-    let postID, id: Int?
-    let name, email, body: String?
+    let postID, id: Int
+    let name, email, body: String
 
     enum CodingKeys: String, CodingKey {
         case postID = "postId"
         case id, name, email, body
     }
 }
-// MARK: - UniqueElement
-struct UniqueElement {
-    let album: AlbumElement
-    let comment: CommentElement
-    let photo: PhotoElement
-}
+
 
