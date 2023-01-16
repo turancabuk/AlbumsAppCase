@@ -31,12 +31,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="Yku-Hd-YQT" kind="presentation" identifier="SplashScreenIdentifier" modalPresentationStyle="fullScreen" id="6hL-wm-CyG"/>
+                        <segue destination="WEa-iQ-dUo" kind="presentation" identifier="SplashScreenIdentifier" modalPresentationStyle="fullScreen" id="Y3V-jB-72Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCG-IH-RI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-557" y="106"/>
+            <point key="canvasLocation" x="-611" y="106"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Q2e-hU-hpw">
@@ -188,17 +188,43 @@
                         <viewLayoutGuide key="safeArea" id="iGK-Y6-v2T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lEB-DH-uX5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="list.bullet" catalog="system" id="u7r-Xl-XNe">
+                            <connections>
+                                <action selector="menuButtonClicked:" destination="Yku-Hd-YQT" id="1BS-cU-A7c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="NFe-sk-AWT" id="kxE-LK-fk4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIE-EW-XnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1281.5384615384614" y="105.92417061611374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OxT-mq-C8A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WEa-iQ-dUo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K58-GQ-vBU">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yku-Hd-YQT" kind="relationship" relationship="rootViewController" id="61f-gJ-Ggn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dup-yi-Tal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="352.30769230769232" y="105.92417061611374"/>
         </scene>
     </scenes>
     <resources>
         <image name="albums" width="650" height="520"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
