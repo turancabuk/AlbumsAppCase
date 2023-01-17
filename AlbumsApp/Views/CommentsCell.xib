@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsCell" rowHeight="164" id="fbA-yv-k0Y" customClass="CommentsCell" customModule="AlbumsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="661" height="164"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbA-yv-k0Y" id="Ul6-14-vFU">
+                <rect key="frame" x="0.0" y="0.0" width="661" height="164"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRn-ht-EsS">
+                        <rect key="frame" x="8" y="8" width="645" height="148"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="comments" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2T-js-ofB">
+                                <rect key="frame" x="8" y="29" width="629" height="111"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isg-XG-ctH">
+                                <rect key="frame" x="8" y="0.0" width="629" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <constraints>
+                            <constraint firstItem="D2T-js-ofB" firstAttribute="top" secondItem="Isg-XG-ctH" secondAttribute="bottom" constant="8" symbolic="YES" id="3eE-vv-k8S"/>
+                            <constraint firstItem="D2T-js-ofB" firstAttribute="leading" secondItem="fRn-ht-EsS" secondAttribute="leading" constant="8" id="Ill-u1-Hbi"/>
+                            <constraint firstAttribute="trailing" secondItem="D2T-js-ofB" secondAttribute="trailing" constant="8" id="ULW-oG-k2U"/>
+                            <constraint firstAttribute="trailing" secondItem="Isg-XG-ctH" secondAttribute="trailing" constant="8" id="k5C-LU-CJ2"/>
+                            <constraint firstItem="Isg-XG-ctH" firstAttribute="top" secondItem="fRn-ht-EsS" secondAttribute="top" id="nTk-NN-qaN"/>
+                            <constraint firstAttribute="bottom" secondItem="D2T-js-ofB" secondAttribute="bottom" constant="8" id="oGf-T2-ICU"/>
+                            <constraint firstItem="Isg-XG-ctH" firstAttribute="leading" secondItem="fRn-ht-EsS" secondAttribute="leading" constant="8" id="zlF-rR-9qB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fRn-ht-EsS" firstAttribute="leading" secondItem="Ul6-14-vFU" secondAttribute="leading" constant="8" id="ROk-Yx-MXN"/>
+                    <constraint firstItem="fRn-ht-EsS" firstAttribute="top" secondItem="Ul6-14-vFU" secondAttribute="top" constant="8" id="YKO-yN-Ze1"/>
+                    <constraint firstAttribute="bottom" secondItem="fRn-ht-EsS" secondAttribute="bottom" constant="8" id="dng-Eg-1LW"/>
+                    <constraint firstAttribute="trailing" secondItem="fRn-ht-EsS" secondAttribute="trailing" constant="8" id="hkX-iI-Pq5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="c9k-XL-DS2"/>
+            <connections>
+                <outlet property="commentLabel" destination="D2T-js-ofB" id="XfY-es-ULG"/>
+                <outlet property="emailLabel" destination="Isg-XG-ctH" id="CKh-f2-Ma8"/>
+            </connections>
+            <point key="canvasLocation" x="254.19847328244273" y="61.971830985915496"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

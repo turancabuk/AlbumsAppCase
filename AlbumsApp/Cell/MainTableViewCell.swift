@@ -36,9 +36,6 @@ class MainTableViewCell: UITableViewCell {
         currentAlbum = model
         userIDLabel.text = "user: \(model.album.userID)"
         titleLabel.text = model.album.title
-        commentNameLabel.text = model.comment.name
-        commentMailLabel.text = model.comment.email
-        commentLabel.text = model.comment.body
         albumCollectionView.reloadData()
         
     }

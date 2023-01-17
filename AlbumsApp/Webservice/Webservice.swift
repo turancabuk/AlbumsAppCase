@@ -72,27 +72,3 @@ enum NetworkError: Error {
 
 
 
-
-//func fetchData<T: Decodable>(from apiCall: AlbumsAPICall, with completion: @escaping (Result<T, Error>) -> Void) {
-//    let task = URLSession.shared.dataTask(with: apiCall.url) { data, response, error in
-//        if let error = error {
-//            completion(.failure(error))
-//            return
-//        }
-//
-//        guard let data = data else {
-//            let error = NSError(domain: "com.example.AlbumsApp", code: 0, userInfo: [NSLocalizedDescriptionKey: "Data is nil"])
-//            completion(.failure(error))
-//            return
-//        }
-//
-//        do {
-//            let decoder = JSONDecoder()
-//            let decodedData = try decoder.decode(T.self, from: data)
-//            completion(.success(decodedData))
-//        } catch {
-//            completion(.failure(error))
-//        }
-//    }
-//    task.resume()
-//}

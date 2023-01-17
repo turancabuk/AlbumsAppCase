@@ -10,10 +10,11 @@ import Foundation
 // MARK: - UniqueElement
 struct UniqueElement: Codable {
     let album: AlbumElement
-    let comment: CommentElement
-    let photo: PhotoElement
+    
+    var commentElement: [CommentElement]
     var photos: [PhotoElement]
 }
+
 
 // MARK: - AlbumElement
 struct AlbumElement: Codable {
@@ -39,13 +40,14 @@ struct PhotoElement: Codable {
 }
 // MARK: - CommentElement
 struct CommentElement: Codable {
-    let postID, id: Int
-    let name, email, body: String
-
+    let postID, id: Int?
+    let name, email, body: String?
+    
     enum CodingKeys: String, CodingKey {
         case postID = "postId"
         case id, name, email, body
     }
 }
+
 
 

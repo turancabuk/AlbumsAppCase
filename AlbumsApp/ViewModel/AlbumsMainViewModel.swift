@@ -71,14 +71,14 @@ final class AlbumsMainViewModel {
             // Adding this line of code
             dispatchGroup.notify(queue: .main) {
                 for album in self.albums {
-                    let albumId = album.id
-                    let relevantComments = self.comments.filter { $0.postID == albumId }
-                    let relevantPhotos = self.photos.filter { $0.albumID == albumId }
-                    for comment in relevantComments {
-                        for photo in relevantPhotos {
-                            self.albumList.append(UniqueElement(album: album, comment: comment, photo: photo, photos: self.photos))
-                        }
-                    }
+//                    let albumId = album.id
+                    let relevantComments = self.comments.filter { $0.postID == album.id }
+                    let relevantPhotos = self.photos.filter { $0.albumID == album.id }
+//                    for comment in relevantComments {
+//                        for photo in relevantPhotos {
+                            self.albumList.append(UniqueElement(album: album, commentElement: relevantComments, photos: relevantPhotos))
+                        
+                    
                 }
                 completion(.success(self.albumList))
             }
