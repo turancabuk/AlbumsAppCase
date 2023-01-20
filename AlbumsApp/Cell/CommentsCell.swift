@@ -17,6 +17,8 @@ class CommentsCell: UITableViewCell {
     
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,5 +29,7 @@ class CommentsCell: UITableViewCell {
         emailLabel.text = comment.email
         commentLabel.text = comment.body
     }
+   
+    
     
 }
